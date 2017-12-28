@@ -8,51 +8,28 @@
 
 import UIKit
 
-class Book {
-    let title: String
-    let author: String
-    let pages: [Page]
+class ViewController: UITableViewController {
     
-    init(title: String, author: String, pages: [Page]) {
-        self.title  = title
-        self.author = author
-        self.pages  = pages
-    }
-}
-
-class Page {
-    let number: Int
-    let text: String
+    var books: [Book]?
     
-    init(number: Int, text: String) {
-        self.number = number
-        self.text = text
-    }
-}
-
-class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Kindle"
         
         view.backgroundColor = .red
         // can provide custom code starting here
         
-        
+        setupBooks()     
+    }
+    
+    func setupBooks() {
         let page1 = Page(number: 1, text: "Text for the first page")
         let page2 = Page(number: 2, text: "Text for the second page")
-
         
         let pages = [page1, page2]
         
         let book = Book(title: "Steve Jobs", author: "Walter Issacson", pages: pages)
-
-//        let firstPage = book.pages[0]
-//
-//        if (page1.text == "Text for the first page" ) {
-//            view.backgroundColor = .white
-//        }
-        
         
         let book2 = Book(title: "Bill Gates A Biography", author: "Michael Becraft", pages: [
             Page(number: 1, text: "Text for page 1"),
@@ -61,14 +38,23 @@ class ViewController: UIViewController {
             Page(number: 4, text: "text for page 4")
             ])
         
-        let books = [book, book2]
+        self.books = [book, book2]
         
-        for book in books {
-            for page in book.pages {
-                print(page.text)
+        //        guard let books = self.books else { return }
+        //
+        //        for book in books {
+        //            for page in book.pages {
+        //                print(page.text)
+        //            }
+        //        }
+        
+        if let unwrappedBooks = self.books {
+            for book in unwrappedBooks {
+                for page in book.pages {
+                    print(page.text)
+                }
             }
         }
     }
-
 }
 

@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		84C0DEEE1FF35D7B001E1A98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0DEED1FF35D7B001E1A98 /* AppDelegate.swift */; };
 		84C0DEF01FF35D7B001E1A98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0DEEF1FF35D7B001E1A98 /* ViewController.swift */; };
-		84C0DEF31FF35D7B001E1A98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C0DEF11FF35D7B001E1A98 /* Main.storyboard */; };
 		84C0DEF51FF35D7B001E1A98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C0DEF41FF35D7B001E1A98 /* Assets.xcassets */; };
 		84C0DEF81FF35D7B001E1A98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C0DEF61FF35D7B001E1A98 /* LaunchScreen.storyboard */; };
+		84CAB5F81FF49B0A0074E58A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAB5F71FF49B0A0074E58A /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84C0DEEA1FF35D7B001E1A98 /* KindleLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KindleLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C0DEED1FF35D7B001E1A98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C0DEEF1FF35D7B001E1A98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		84C0DEF21FF35D7B001E1A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84C0DEF41FF35D7B001E1A98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84C0DEF71FF35D7B001E1A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84C0DEF91FF35D7B001E1A98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CAB5F71FF49B0A0074E58A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +56,10 @@
 			children = (
 				84C0DEED1FF35D7B001E1A98 /* AppDelegate.swift */,
 				84C0DEEF1FF35D7B001E1A98 /* ViewController.swift */,
-				84C0DEF11FF35D7B001E1A98 /* Main.storyboard */,
 				84C0DEF41FF35D7B001E1A98 /* Assets.xcassets */,
 				84C0DEF61FF35D7B001E1A98 /* LaunchScreen.storyboard */,
 				84C0DEF91FF35D7B001E1A98 /* Info.plist */,
+				84CAB5F71FF49B0A0074E58A /* Models.swift */,
 			);
 			path = KindleLBTA;
 			sourceTree = "<group>";
@@ -125,7 +125,6 @@
 			files = (
 				84C0DEF81FF35D7B001E1A98 /* LaunchScreen.storyboard in Resources */,
 				84C0DEF51FF35D7B001E1A98 /* Assets.xcassets in Resources */,
-				84C0DEF31FF35D7B001E1A98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CAB5F81FF49B0A0074E58A /* Models.swift in Sources */,
 				84C0DEF01FF35D7B001E1A98 /* ViewController.swift in Sources */,
 				84C0DEEE1FF35D7B001E1A98 /* AppDelegate.swift in Sources */,
 			);
@@ -144,14 +144,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		84C0DEF11FF35D7B001E1A98 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84C0DEF21FF35D7B001E1A98 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		84C0DEF61FF35D7B001E1A98 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
