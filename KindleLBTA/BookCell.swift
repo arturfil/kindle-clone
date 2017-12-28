@@ -21,7 +21,7 @@ class BookCell: UITableViewCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "This is the text for the title of our book inside of our cell"
-        label.translatesAutoresizingMaskIntoConstraints = false
+         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
