@@ -23,6 +23,14 @@ class ViewController: UITableViewController {
         setupBooks()     
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selecting new View Controller Window")
+        let layout = UICollectionViewFlowLayout()
+        let bookPagerController = BookPagerController(collectionViewLayout: layout)
+        let navController = UINavigationController(rootViewController: bookPagerController)
+        present(navController, animated: true, completion: nil)
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 86
     }
@@ -31,10 +39,7 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! BookCell
         
         let book = books?[indexPath.row]
-        
-        cell.coverImageView.image = book?.image
-        cell.titleLabel.text = book?.title
-        cell.authorLabel.text = book?.author
+        cell.book = book
         
         return cell
     }
