@@ -24,9 +24,16 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selecting new View Controller Window")
+        
+        let selectedBook = self.books?[indexPath.row]
+//        print(book?.tite)
+//        return
+        
         let layout = UICollectionViewFlowLayout()
         let bookPagerController = BookPagerController(collectionViewLayout: layout)
+        
+        bookPagerController.book = selectedBook
+        
         let navController = UINavigationController(rootViewController: bookPagerController)
         present(navController, animated: true, completion: nil)
     }
