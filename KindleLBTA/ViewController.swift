@@ -15,6 +15,8 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationBarStyles()
+        
         tableView.register(BookCell.self, forCellReuseIdentifier: "cellId")
         tableView.tableFooterView = UIView()
         
@@ -22,6 +24,8 @@ class ViewController: UITableViewController {
         
         fetchBooks()
     }
+    
+    
     
     func fetchBooks() {
         print("Fetching Books")
@@ -100,24 +104,5 @@ class ViewController: UITableViewController {
         return 0
         
     }
-    
-    func setupBooks() {
-        let page1 = Page(number: 1, text: "Text for the first page")
-        let page2 = Page(number: 2, text: "Text for the second page")
-        
-        let pages = [page1, page2]
-        
-        let book = Book(title: "Steve Jobs", author: "Walter Issacson", image: #imageLiteral(resourceName: "steve_jobs"), pages: pages)
-        
-        let book2 = Book(title: "Bill Gates A Biography", author: "Michael Becraft", image: #imageLiteral(resourceName: "bill_gates"), pages: [
-            Page(number: 1, text: "Text for page 1"),
-            Page(number: 2, text: "text for page 2"),
-            Page(number: 3, text: "text for page 3"),
-            Page(number: 4, text: "text for page 4")
-            ])
-        
-        self.books = [book, book2]
-        
-    }
-}
 
+}
